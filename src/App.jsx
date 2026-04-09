@@ -1,9 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 
-const API_URL =
-  import.meta.env.VITE_TODOS_API_URL ??
-  'https://cjkim-vive-todo-backend-e1c570baeabe.herokuapp.com/todos'
+const API_URL = import.meta.env.VITE_TODOS_API_URL ?? '/api/todos'
 const getErrorMessage = async (response, fallbackMessage) => {
   try {
     const data = await response.json()
